@@ -1,4 +1,105 @@
-.small-image{
-    width: 100px;
-    height: 100px;
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+    font-family: "Ebrima",sans-serif;
+    /*outline:1px blue solid;*/
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+}
+
+
+nav li{
+    margin: 10px;
+}
+
+body {
+    background-color: teal;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+
+    z-index: 2;
+    background-color: rgba(128,128,128,0.70);
+}
+
+.modalContent{
+    background-color: #fff;
+    padding: 20px;
+
+}
+
+.modalContent form{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.modalContent input[type="submit"]{
+    margin-top: 20px;
+    width: 25%;
+}
+
+select {
+    width: 50%;
+}
+
+.modalContent input, select {
+    margin-bottom: 20px;
+}
+
+div label, fieldset {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+fieldset {
+    display: flex;
+}
+
+input[type="radio"], fieldset label {
+    margin: 0;
+    padding: 10px;
+}
+
+input[type="radio"]{
+    margin-left: 10px;
+}
+
+#mealForm{
+    margin-top: 30px;
+    text-align: center;
+}
+
+#mealForm input {
+    border-radius: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#mealForm h2{
+    padding-bottom: 20px;
+}
+
