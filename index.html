@@ -34,7 +34,7 @@
             <label for="imageUpload">Bild einfügen</label>
             <input type="file" id="imageUpload" name="imageUpload" accept="image/*">
             <label for="description">Beschreibung</label>
-            <input type="text" id="description" name="description" placeholder="Sushi: Reis, Fisch, Gemüse – traditionell japanisch.">
+            <textarea id="description" name="description" placeholder="Sushi: Reis, Fisch, Gemüse – traditionell japanisch." rows="6" cols="50"></textarea>
             <input type="submit" value="weiter">
           </form>
 
@@ -62,25 +62,25 @@
             <fieldset>
               <legend>Geschmack:</legend>
               <input type="radio" id="savory" name="taste" value="savory">
-              <label for="savory">Herzhaft</label><br>
+              <label for="savory">Herzhaft</label>
               <input type="radio" id="sweet" name="taste" value="sweet">
-              <label for="sweet">Süß</label><br>
+              <label for="sweet">Süß</label>
             </fieldset>
 
             <fieldset>
               <legend>Temperatur:</legend>
               <input type="radio" id="hot" name="temperature" value="hot">
-              <label for="hot">Warm</label><br>
+              <label for="hot">Warm</label>
               <input type="radio" id="cold" name="temperature" value="cold">
-              <label for="cold">Kalt</label><br>
+              <label for="cold">Kalt</label>
             </fieldset>
 
             <fieldset>
               <legend>Gesundheit:</legend>
               <input type="radio" id="healthy" name="health" value="healthy">
-              <label for="healthy">Gesund</label><br>
+              <label for="healthy">Gesund</label>
               <input type="radio" id="unhealthy" name="health" value="unhealthy">
-              <label for="unhealthy">Ungesund</label><br>
+              <label for="unhealthy">Ungesund</label>
             </fieldset>
             <input type="submit" value="hinzufügen">
           </form>
