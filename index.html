@@ -18,6 +18,27 @@
         </ul>
       </nav>
     </header>
-
+    <main>
+      <form id="mealForm" action="#" method="get">
+        <h2>Finde dein Gericht</h2>
+        <input type="submit" value="Suchen">
+      </form>
+      <div id="result">
+      </div>
+      <div class="modal">
+        <div class="modalContent">
+          <h3>Gericht hinzufügen</h3>
+          <form id="page1">
+            <label for="meal">Gericht</label>
+            <input type="text" id="meal" name="meal" placeholder="Sushi" required>
+            <label for="imageUpload">Bild einfügen</label>
+            <input type="file" id="imageUpload" name="imageUpload" accept="image/*">
+            <label for="description">Beschreibung</label>
+            <input type="text" id="description" name="description" placeholder="Sushi: Reis, Fisch, Gemüse – traditionell japanisch.">
+            <input type="submit" value="weiter">
+          </form>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
