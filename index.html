@@ -37,6 +37,53 @@
             <input type="text" id="description" name="description" placeholder="Sushi: Reis, Fisch, Gemüse – traditionell japanisch.">
             <input type="submit" value="weiter">
           </form>
+
+          <form id="page2">
+            <label for="season">Season</label>
+            <select id="season" required>
+              <option value="summer">Sommer</option>
+              <option value="winter">Winter</option>
+            </select>
+
+            <label for="type">Diät</label>
+            <select id="type" required>
+              <option value="vegi">Vegitarisch</option>
+              <option value="meat">Fleisch</option>
+              <option value="fish">Fisch</option>
+            </select>
+
+            <label for="menu">Menü</label>
+            <select id="menu" required>
+              <option value="appetizer">Beilage</option>
+              <option value="main">Hauptgericht</option>
+              <option value="desert">Nachtisch</option>
+            </select>
+
+            <fieldset>
+              <legend>Geschmack:</legend>
+              <input type="radio" id="savory" name="taste" value="savory">
+              <label for="savory">Herzhaft</label><br>
+              <input type="radio" id="sweet" name="taste" value="sweet">
+              <label for="sweet">Süß</label><br>
+            </fieldset>
+
+            <fieldset>
+              <legend>Temperatur:</legend>
+              <input type="radio" id="hot" name="temperature" value="hot">
+              <label for="hot">Warm</label><br>
+              <input type="radio" id="cold" name="temperature" value="cold">
+              <label for="cold">Kalt</label><br>
+            </fieldset>
+
+            <fieldset>
+              <legend>Gesundheit:</legend>
+              <input type="radio" id="healthy" name="health" value="healthy">
+              <label for="healthy">Gesund</label><br>
+              <input type="radio" id="unhealthy" name="health" value="unhealthy">
+              <label for="unhealthy">Ungesund</label><br>
+            </fieldset>
+            <input type="submit" value="hinzufügen">
+          </form>
         </div>
       </div>
     </main>
