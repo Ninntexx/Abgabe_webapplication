@@ -1,4 +1,4 @@
-interface isMenu {
+export interface isMenu {
     name: string;
     image?: string;
     description?: string;
