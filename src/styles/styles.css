@@ -3,7 +3,7 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
-    color: inherit;
+    color: #A8D0E6;
     font-family: "Ebrima",sans-serif;
     /*outline:1px blue solid;*/
 }
@@ -12,6 +12,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #24305E;
 }
 
 nav ul {
@@ -24,7 +25,7 @@ nav li{
 }
 
 body {
-    background-color: teal;
+    background-color: #A8D0E6;
 }
 
 #modal {
@@ -40,13 +41,13 @@ body {
     overflow: auto;
 
     z-index: 2;
-    background-color: rgba(128,128,128,0.70);
+    background-color: rgba(1,1,1,0.70);
 }
 
 #modal form{
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    background-color: #F76C6C;
     padding: 20px;
 }
 
@@ -86,19 +87,29 @@ input[type="radio"]{
     text-align: center;
 }
 
-#mealForm input {
+#find {
     border-radius: 25px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 25px 100px 25px 100px;
     font-size: 30px;
     font-weight: bold;
+    border: none;
+    background-color: #24305E;
+    color: #A8D0E6;
 }
 
 #mealForm h2{
     padding-bottom: 20px;
+    color: #24305E;
 }
 
 #addMenu {
     border: none;
     background: none;
+    font-size: medium;
 }
+
+
+
+
+
+
