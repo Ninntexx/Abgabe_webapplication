@@ -27,7 +27,7 @@ body {
     background-color: teal;
 }
 
-.modal {
+#modal {
     position: fixed;
     top: 0;
     right: 0;
@@ -43,19 +43,14 @@ body {
     background-color: rgba(128,128,128,0.70);
 }
 
-.modalContent{
-    background-color: #fff;
-    padding: 20px;
-
-}
-
-.modalContent form{
+#modal form{
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
+    background-color: #fff;
+    padding: 20px;
 }
 
-.modalContent input[type="submit"]{
+#modal input[type="submit"]{
     margin-top: 20px;
     width: 25%;
 }
@@ -64,7 +59,7 @@ select {
     width: 50%;
 }
 
-.modalContent input, select {
+#modal input, select {
     margin-bottom: 20px;
 }
 

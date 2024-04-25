@@ -25,67 +25,7 @@
       </form>
       <div id="result">
       </div>
-      <div class="modal">
-        <div class="modalContent">
-          <h3>Gericht hinzufügen</h3>
-          <form id="page1">
-            <label for="meal">Gericht</label>
-            <input type="text" id="meal" name="meal" placeholder="Sushi" required>
-            <label for="imageUpload">Bild einfügen</label>
-            <input type="file" id="imageUpload" name="imageUpload" accept="image/*">
-            <label for="description">Beschreibung</label>
-            <textarea id="description" name="description" placeholder="Sushi: Reis, Fisch, Gemüse – traditionell japanisch." rows="6" cols="50"></textarea>
-            <input type="submit" id="next" value="weiter">
-          </form>
 
-          <form id="page2">
-            <label for="season">Season</label>
-            <select id="season" required>
-              <option value="summer">Sommer</option>
-              <option value="winter">Winter</option>
-            </select>
-
-            <label for="type">Diät</label>
-            <select id="type" required>
-              <option value="vegi">Vegitarisch</option>
-              <option value="meat">Fleisch</option>
-              <option value="fish">Fisch</option>
-            </select>
-
-            <label for="menu">Menü</label>
-            <select id="menu" required>
-              <option value="appetizer">Beilage</option>
-              <option value="main">Hauptgericht</option>
-              <option value="desert">Nachtisch</option>
-            </select>
-
-            <fieldset>
-              <legend>Geschmack:</legend>
-              <input type="radio" id="savory" name="taste" value="savory">
-              <label for="savory">Herzhaft</label>
-              <input type="radio" id="sweet" name="taste" value="sweet">
-              <label for="sweet">Süß</label>
-            </fieldset>
-
-            <fieldset>
-              <legend>Temperatur:</legend>
-              <input type="radio" id="hot" name="temperature" value="hot">
-              <label for="hot">Warm</label>
-              <input type="radio" id="cold" name="temperature" value="cold">
-              <label for="cold">Kalt</label>
-            </fieldset>
-
-            <fieldset>
-              <legend>Gesundheit:</legend>
-              <input type="radio" id="healthy" name="health" value="healthy">
-              <label for="healthy">Gesund</label>
-              <input type="radio" id="unhealthy" name="health" value="unhealthy">
-              <label for="unhealthy">Ungesund</label>
-            </fieldset>
-            <input type="submit" id="addToMenuList" value="hinzufügen">
-          </form>
-        </div>
-      </div>
     </main>
   </body>
 </html>
