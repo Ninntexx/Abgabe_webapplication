@@ -42,45 +42,46 @@ addMenu.addEventListener("click", function() {
                 <h3>Gericht hinzufügen</h3>
                 <label for="season">Season</label>
                 <select id="season" required>
-                  <option value="summer">Sommer</option>
-                  <option value="winter">Winter</option>
+                    <option value="unabhängig">unabhängig</option>
+                    <option value="Sommer">Sommer</option>
+                    <option value="Winter">Winter</option>
                 </select>
 
                 <label for="diet">Diät</label>
                 <select id="diet" required>
-                  <option value="vegi">Vegitarisch</option>
-                  <option value="meat">Fleisch</option>
-                  <option value="fish">Fisch</option>
+                    <option value="Vegitarisch">Vegitarisch</option>
+                    <option value="Fleisch">Fleisch</option>
+                    <option value="Fisch">Fisch</option>
                 </select>
     
                 <label for="menu">Menü</label>
                 <select id="menu" required>
-                  <option value="appetizer">Beilage</option>
-                  <option value="main">Hauptgericht</option>
-                  <option value="desert">Nachtisch</option>
+                    <option value="Beilage">Beilage</option>
+                    <option value="Hauptgericht">Hauptgericht</option>
+                    <option value="Nachtisch">Nachtisch</option>
                 </select>
     
                 <fieldset>
                   <legend>Geschmack:</legend>
                   <input type="radio" id="normal" name="taste" value="normal">
-                  <label for="normal">Herzhaft</label>
-                  <input type="radio" id="sweet" name="taste" value="sweet">
+                  <label for="normal">Normal</label>
+                  <input type="radio" id="sweet" name="taste" value="süß">
                   <label for="sweet">Süß</label>
                 </fieldset>
     
                 <fieldset>
                   <legend>Temperatur:</legend>
-                  <input type="radio" id="hot" name="temperature" value="hot">
+                  <input type="radio" id="hot" name="temperature" value="warm">
                   <label for="hot">Warm</label>
-                  <input type="radio" id="cold" name="temperature" value="cold">
+                  <input type="radio" id="cold" name="temperature" value="kalt">
                   <label for="cold">Kalt</label>
                 </fieldset>
     
                 <fieldset>
                   <legend>Gesundheit:</legend>
-                  <input type="radio" id="healthy" name="health" value="healthy">
+                  <input type="radio" id="healthy" name="health" value="gesund">
                   <label for="healthy">Gesund</label>
-                  <input type="radio" id="unhealthy" name="health" value="unhealthy">
+                  <input type="radio" id="unhealthy" name="health" value="ungesund">
                   <label for="unhealthy">Ungesund</label>
                 </fieldset>
                 <input type="submit" id="addToMenuList" value="hinzufügen">
