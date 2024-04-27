@@ -3,8 +3,8 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
-    color: #A8D0E6;
     font-family: "Ebrima",sans-serif;
+    color: #A8D0E6;
     /*outline:1px blue solid;*/
 }
 
@@ -19,8 +19,13 @@ nav ul {
     display: flex;
 }
 
+nav li{
+    margin: 10px;
+}
+
 body {
     background-color: #A8D0E6;
+    color: #A8D0E6;
 }
 
 #modal {
@@ -46,35 +51,22 @@ body {
     padding: 20px;
 }
 
-#modal input[type="submit"]{
+.menuAddButtons{
+    display: flex;
     margin-top: 20px;
-    width: 25%;
+    justify-content: space-between;
 }
-
-select {
-    width: 50%;
-}
-
-#modal input, select {
+#cancelMenu{
     margin-bottom: 20px;
 }
 
-div label, fieldset {
+#modal input{
+    margin-bottom: 20px;
+}
+
+label{
     margin-top: 20px;
     margin-bottom: 5px;
-}
-
-fieldset {
-    display: flex;
-}
-
-input[type="radio"], fieldset label {
-    margin: 0;
-    padding: 10px;
-}
-
-input[type="radio"]{
-    margin-left: 10px;
 }
 
 #mealForm{
@@ -119,15 +111,9 @@ h1 {
     margin: 15px;
 }
 
-nav li{
-    margin: 10px;
-}
-
 #title {
     display: flex;
 }
-
-
 
 
 

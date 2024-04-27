@@ -19,7 +19,12 @@ addMenu.addEventListener("click", function() {
         <input type="file" id="imageUpload" name="imageUpload" accept="image/*">
         <label for="description">Beschreibung</label>
         <textarea id="description" name="description" placeholder="Sushi: Reis, Fisch, Gemüse – traditionell japanisch." rows="6" cols="50"></textarea>
-        <input type="submit" id="next" value="weiter">
+        <div class="menuAddButtons">
+              <button id="cancelMenu">Abbrechen</button>
+              <input type="submit" id="submitMenu" value="Hinzufügen">
+        </div>
+        
+        
     `;
         form.id = 'page1';
 
