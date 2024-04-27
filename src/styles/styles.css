@@ -4,7 +4,6 @@
     text-decoration: none;
     list-style: none;
     font-family: "Ebrima",sans-serif;
-    color: #A8D0E6;
     /*outline:1px blue solid;*/
 }
 
@@ -25,6 +24,7 @@ nav li{
 
 body {
     background-color: #A8D0E6;
+    width: 100%;
     color: #A8D0E6;
 }
 
@@ -115,7 +115,27 @@ h1 {
     display: flex;
 }
 
+#menuTable {
+    border-collapse: collapse;
+    width: 60%;
+    margin: 50px;
 
+}
 
+#menuTable th, #menuTable td {
+    border: 2px solid ;
+    padding: 8px;
+    text-align: left;
+}
 
+#menuTable th {
+    background-color: #f2f2f2;
+}
 
+a, #addMenu{
+    color: #A8D0E6;
+}
+
+#menuTableModal {
+
+}

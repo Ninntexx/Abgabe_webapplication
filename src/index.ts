@@ -1,4 +1,4 @@
-import { page1, page2, modal, addMenu } from './dom-utils';
+import { addMenu } from './dom-utils';
 import { isMenu } from './interface';
 import './styles/styles.css';
 
@@ -45,18 +45,23 @@ addMenu.addEventListener("click", function() {
 
 
             // save formData to local storage, then close modal
-            const meal = formData.get('meal') as string;
-            const description = formData.get('description') as string;
+            const mealAdd = formData.get('meal') as string;
+            const descriptionAdd = formData.get('description') as string;
+            const imageUpload = formData.get('imageUpload') as string;
 
-            const newMenu = {
-                meal: meal,
-                description: description,
+            const newMenu: isMenu = {
+                meal: mealAdd,
+                description: descriptionAdd,
+                image: imageUpload
             };
+
 
             localStorage.setItem('form', JSON.stringify(newMenu));
 
-            //close the modal
             closeModal();
+
         });
+
 });
+
 
