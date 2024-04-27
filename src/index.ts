@@ -15,8 +15,9 @@ addMenu.addEventListener("click", function() {
         <h3>Gericht hinzufügen</h3>
         <label for="meal">Gericht</label>
         <input type="text" id="meal" name="meal" placeholder="Sushi" required>
-        <label for="imageUpload">Bild einfügen</label>
-        <input type="file" id="imageUpload" name="imageUpload" accept="image/*">
+        <!--<input type="file" id="imageUpload" name="imageUpload" accept="image/*">-->
+        <label for="imageUpload">Bild hinterlegen</label>
+        <input type="text" id="imageUpload" name="imageUpload" placeholder="Bild URL einfügen">
         <label for="description">Beschreibung</label>
         <textarea id="description" name="description" placeholder="Sushi: Reis, Fisch, Gemüse – traditionell japanisch." rows="6" cols="50"></textarea>
         <div class="menuAddButtons">
@@ -31,11 +32,11 @@ addMenu.addEventListener("click", function() {
         modal.appendChild(form);
         document.body.appendChild(modal);
 
-        // event listeners to close modal
-        //const cancelButton: HTMLButtonElement = document.querySelector('#page1-cancel') as HTMLButtonElement;
-        //cancelButton.addEventListener('click', closeModal);
+        // event listener to close modal
+        const cancelButton: HTMLButtonElement = document.querySelector('#cancelMenu') as HTMLButtonElement;
+        cancelButton.addEventListener('click', closeModal);
 
-        // add event listener to submit button
+        // event listener to submit button
         const nextButton= document.querySelector('#next') as HTMLInputElement;
         form.addEventListener('submit', function (event: Event) {
             event.preventDefault();
@@ -58,3 +59,4 @@ addMenu.addEventListener("click", function() {
             closeModal();
         });
 });
+
