@@ -72,6 +72,7 @@ label{
 #mealForm{
     margin-top: 30px;
     text-align: center;
+
 }
 
 #find {
@@ -136,6 +137,29 @@ a, #addMenu{
     color: #A8D0E6;
 }
 
-#menuTableModal {
+#noMenu{
+    color: #F76C6C;
+}
 
+#imageOutput{
+    display: block;
+    margin: 0 auto;
+    max-width: 600px;
+    max-height: 600px;
+}
+
+#menuOutput {
+    display: flex;
+    flex-direction: column;
+    color: #24305E;
+}
+
+#descriptionOutput{
+    max-width: 600px;
+    align-self: center;
+}
+
+#result{
+    margin-top: 30px;
+    text-align: center;
 }

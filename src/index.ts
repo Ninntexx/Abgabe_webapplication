@@ -1,4 +1,4 @@
-import { addMenu } from './dom-utils';
+import { addMenu, result , find } from './dom-utils';
 import { IsMenu } from './interface';
 import './styles/styles.css';
 import {save} from "./data.ts";
@@ -57,10 +57,41 @@ addMenu.addEventListener("click", function() {
             save(newMenu);
             closeModal();
         });
-
 });
 
+// generates a random number within the array range
+function getRandom(min: number, max: number) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
 
+// displays a random meal from menuList
+find.addEventListener('click', function ()  {
+    result.innerHTML="";
+    let data: Array<IsMenu> = JSON.parse(localStorage.getItem('form')as string);
+    if(!data || data.length === 0){
+        const noMenu = document.createElement('h3');
+        noMenu.id = 'noMenu';
+        noMenu.textContent = 'Du hast noch kein Gericht hinzugefügt!';
+        result.appendChild(noMenu);
+        setTimeout(() => {
+            noMenu.remove();
+        }, 1500);
+        }
+    else{
+        const index = getRandom(0, data.length)
+        const menuShow: IsMenu = data[index];
+        console.log(menuShow);
+        const menuOutput = document.createElement('div');
+        menuOutput.id = 'menuOutput';
+        menuOutput.innerHTML = `
+        <img id="imageOutput" src="public/chef.png" alt=public/chef.webp>
+        <h2 id="menuText">${menuShow.meal}</h2>
+        <p id="descriptionOutput">${menuShow.description}</p>`;
+
+        result.appendChild(menuOutput);
+    }
+
+})
 
 
 

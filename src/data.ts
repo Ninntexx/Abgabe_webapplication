@@ -27,7 +27,7 @@ export function view(){
             newRow.innerHTML = `
             <td>${menu.meal}</td>
             <td>${menu.description}</td>
-            <td><img src="${menu.image}" alt="${menu.meal}"></td>
+            <td><img src="${menu.image}"></td>
             <td><button id="${index}">löschen</button></td>
         `;
             tbody.appendChild(newRow);
