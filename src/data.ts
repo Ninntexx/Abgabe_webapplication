@@ -28,7 +28,7 @@ export function view(){
             <td>${menu.meal}</td>
             <td>${menu.description}</td>
             <td><img src="${menu.image}"></td>
-            <td><button id="${index}">löschen</button></td>
+            <td id="deleteButton"><button id="${index}"><img src="public/trash.svg" alt="löschen"></button></td>
         `;
             tbody.appendChild(newRow);
         })

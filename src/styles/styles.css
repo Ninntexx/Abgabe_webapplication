@@ -119,8 +119,9 @@ h1 {
 #menuTable {
     border-collapse: collapse;
     width: 100%;
+    font-size: x-large;
 }
-#menuTableModal { margin: 20px }
+#menuTableModal { margin: 100px }
 
 #menuTable th, #menuTable td {
     border: 2px solid ;
@@ -162,4 +163,8 @@ a, #addMenu{
 #result{
     margin-top: 30px;
     text-align: center;
+}
+
+#deleteButton {
+    width: 5px;
 }
