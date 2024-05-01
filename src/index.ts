@@ -18,7 +18,9 @@ addMenu.addEventListener("click", function() {
         <input type="text" id="meal" name="meal" placeholder="Sushi" required>
         <!--<input type="file" id="imageUpload" name="imageUpload" accept="image/*">-->
         <label for="imageUpload">Bild hinterlegen</label>
-        <input type="url" id="imageUpload" name="imageUpload" placeholder="Bild URL einfügen">
+        <input type="url" id="imageUpload" name="recipe" placeholder="Bild URL einfügen"> 
+        <label for="recipe">Rezept hinterlegen</label>
+        <input type="url" id="recipe" name="recipe" placeholder="Rezept URL einfügen">
         <label for="description">Beschreibung</label>
         <textarea id="description" name="description" placeholder="Sushi: Reis, Fisch, Gemüse – traditionell japanisch." rows="6" cols="50"></textarea>
         <div class="menuAddButtons">
@@ -47,13 +49,14 @@ addMenu.addEventListener("click", function() {
             const mealAdd = formData.get('meal') as string;
             const descriptionAdd = formData.get('description') as string;
             const imageUpload = formData.get('imageUpload') as string;
+            const recipeAdd = formData.get('recipe') as string;
 
              const newMenu: IsMenu = {
                 meal: mealAdd,
                 description: descriptionAdd,
-                image: imageUpload
+                image: imageUpload,
+                 recipe: recipeAdd
             };
-
             save(newMenu);
             closeModal();
         });
@@ -80,14 +83,13 @@ find.addEventListener('click', function ()  {
     else{
         const index = getRandom(0, data.length)
         const menuShow: IsMenu = data[index];
-        console.log(menuShow);
         const menuOutput = document.createElement('div');
         menuOutput.id = 'menuOutput';
         menuOutput.innerHTML = `
         <img id="imageOutput" src="public/chef.png" alt=public/chef.webp>
         <h2 id="menuText">${menuShow.meal}</h2>
+        <a href="${menuShow.recipe}">${menuShow.recipe}</a>
         <p id="descriptionOutput">${menuShow.description}</p>`;
-
         result.appendChild(menuOutput);
     }
 

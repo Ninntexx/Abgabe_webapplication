@@ -134,7 +134,7 @@ h1 {
     color: #A8D0E6;
 }
 
-a, #addMenu{
+nav input, nav a{
     color: #A8D0E6;
 }
 
@@ -167,4 +167,12 @@ a, #addMenu{
 
 #deleteButton {
     width: 5px;
+}
+
+td a:hover{
+    color: #24305E;
+}
+
+#result a{
+    color: #24305E;
 }
