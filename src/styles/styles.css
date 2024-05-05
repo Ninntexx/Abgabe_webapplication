@@ -56,13 +56,10 @@ body {
     margin-top: 20px;
     justify-content: space-between;
 }
-#cancelMenu{
-    margin-bottom: 20px;
-}
 
-#modal input{
-    margin-bottom: 20px;
-}
+#cancelMenu{ margin-bottom: 20px; }
+
+#modal input{margin-bottom: 20px; }
 
 label{
     margin-top: 20px;
@@ -72,7 +69,6 @@ label{
 #mealForm{
     margin-top: 30px;
     text-align: center;
-
 }
 
 #find {
@@ -91,9 +87,7 @@ label{
 }
 
 #addMenu {
-    border: none;
-    background: none;
-    font-size: medium;
+
 }
 
 #logo {
@@ -112,9 +106,7 @@ h1 {
     margin: 15px;
 }
 
-#title {
-    display: flex;
-}
+#title { display: flex; }
 
 #menuTable {
     border-collapse: collapse;
@@ -134,8 +126,11 @@ h1 {
     color: #A8D0E6;
 }
 
-nav input, nav a{
+nav input,nav button, nav a{
     color: #A8D0E6;
+    border: none;
+    background: none;
+    font-size: medium;
 }
 
 #noMenu{
@@ -145,14 +140,15 @@ nav input, nav a{
 #imageOutput{
     display: block;
     margin: 0 auto;
-    max-width: 600px;
-    max-height: 600px;
+    max-width: 300px;
+    max-height: 300px;
 }
 
 #menuOutput {
     display: flex;
     flex-direction: column;
     color: #24305E;
+    margin-bottom: 20px;
 }
 
 #descriptionOutput{
@@ -174,5 +170,6 @@ td a:hover{
 }
 
 #result a{
-    color: #24305E;
+    color: #303C6C;
+    font-size: small;
 }
