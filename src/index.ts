@@ -1,7 +1,7 @@
-import { addMenu, result , find } from './dom-utils';
+import {addMenu, result, find, fillMenuListButton} from './dom-utils';
 import { IsMenu } from './interface';
 import './styles/styles.css';
-import {save} from "./data.ts";
+import {exampleMenus, save} from "./data.ts";
 
 function closeModal() {
     const modal = document.querySelector('#modal') as HTMLDivElement;
@@ -16,7 +16,6 @@ addMenu.addEventListener("click", function() {
         <h3>Gericht hinzufügen</h3>
         <label for="meal">Gericht</label>
         <input type="text" id="meal" name="meal" placeholder="Sushi" required>
-        <!--<input type="file" id="imageUpload" name="imageUpload" accept="image/*">-->
         <label for="imageUpload">Bild hinterlegen</label>
         <input type="url" id="imageUpload" name="recipe" placeholder="Bild URL einfügen"> 
         <label for="recipe">Rezept hinterlegen</label>
@@ -95,7 +94,9 @@ find.addEventListener('click', function ()  {
 
 })
 
-
+fillMenuListButton.addEventListener("click", function () {
+    exampleMenus();
+});
 
 
 

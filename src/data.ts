@@ -1,5 +1,5 @@
 import { IsMenu } from './interface.ts';
-import {menuTable, clearList, fillMenuListButton} from "./dom-utils.ts";
+import {menuTable, clearList} from "./dom-utils.ts";
 
 clearListButton();
 export function save(newMenu: IsMenu){
@@ -19,7 +19,6 @@ export function save(newMenu: IsMenu){
 }
 
 export function view(){
-    if(!menuTable) return
     menuTable.innerHTML = "";
     // if there is indeed data then continue
     if(localStorage.getItem('form') != null){
@@ -46,7 +45,6 @@ export function view(){
             });
         })
         if(menu.length === 0) listEmpty();
-
     } else {
         listEmpty();
     }
@@ -79,7 +77,7 @@ function clearListButton() {
 }
 
 // Adds A list of example menus to the menuList Table
-fillMenuListButton.addEventListener("click", function (){
+export function exampleMenus (){
     localStorage.setItem('form', JSON.stringify([
         {meal: "Sushi", description: "Sushi ist eine japanische Spezialität, die aus gekochtem Reis und rohem oder gekochtem Fisch besteht, der oft mit Nori (gerösteter Seetang) umwickelt wird.", image: "https://assets.zuckerjagdwurst.com/62utca52nr9qv140h85vb7cihmud/1110/701/55/true/center/R849-Horl-Sushiplatte-113.jpg?animated=false", recipe: "https://www.reishunger.de/rezepte/rezept/1268/klassisches-maki-sushi-und-inside-out-rolls"},
         {meal: "Pizza", description: "Teig, Tomatensauce, Mozzarella-Käse und Salami, gebacken und gewürzt nach Geschmack.", image: "https://www.daskochrezept.de/sites/daskochrezept.de/files/styles/full_width_tablet_4_3/public/2021-05/pizza_salami.jpg?h=21272edb&itok=ipXn2R5l", recipe: "https://www.daskochrezept.de/rezepte/pizza-salami-wie-vom-italiener"},
@@ -98,5 +96,4 @@ fillMenuListButton.addEventListener("click", function (){
         {meal: "Pho", description: "Pho ist eine vietnamesische Nudelsuppe, die aus einer würzigen Brühe, Reisnudeln, dünn geschnittenem Rindfleisch oder Hühnchen, Kräutern und verschiedenen Gewürzen besteht.", image: "https://www.eatbetter.de/sites/eatbetter.de/files/styles/full_width_tablet_4_3/public/2021-12/11-pho-bo-5688-quer.jpg?h=935f78ac&itok=yhdVi_wc", recipe: "https://www.eatbetter.de/rezepte/pho-bo-die-schnelle-einfache-nudelsuppe"},
         {meal: "Paella", description: "Paella ist ein spanisches Reisgericht, das mit Safran gewürzt und mit Meeresfrüchten, Hühnchen, Gemüse und Bohnen zubereitet wird.", image: "https://image.livingathome.de/12858546/t/w4/v2/w960/r1/-/lah201306080-paella-jpg--41174-.jpg", recipe: "https://www.livingathome.de/kochen-feiern/rezepte/10567-rzpt-rezept-paella"}
     ]))
-    view();
-});
+}
