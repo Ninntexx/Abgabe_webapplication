@@ -86,10 +86,6 @@ label{
     color: #24305E;
 }
 
-#addMenu {
-
-}
-
 #logo {
     border-radius: 100px;
     height: 30px;
@@ -97,7 +93,6 @@ label{
     background-color: #F76C6C;
     padding: 5px;
     margin: 15px;
-
 }
 
 h1 {
@@ -106,22 +101,19 @@ h1 {
     margin: 15px;
 }
 
-#title { display: flex; }
+#title { display: flex }
 
 #menuTable {
     border-collapse: collapse;
     width: 100%;
-    font-size: x-large;
+    font-size: large;
 }
-#menuTableModal { margin: 100px }
+#menuTableModal { margin: 90px }
 
 #menuTable th, #menuTable td {
     border: 2px solid ;
     padding: 8px;
     text-align: left;
-}
-
-#menuTable th, td {
     background-color: #f2f2f2;
     color: #A8D0E6;
 }
@@ -172,4 +164,12 @@ td a:hover{
 #result a{
     color: #303C6C;
     font-size: small;
+}
+
+#clearList {
+    margin-top: 10px;
+    color: #A8D0E6;
+    background-color: #303C6C;
+    border-radius: 13px;
+    padding: 10px;
 }

@@ -95,6 +95,7 @@ find.addEventListener('click', function ()  {
 
 })
 
+// Adds A list of example menus to the menuList Table
 fillMenuListButton.addEventListener("click", function (){
     localStorage.setItem('form', JSON.stringify([
         {meal: "Sushi", description: "Sushi ist eine japanische Spezialität, die aus gekochtem Reis und rohem oder gekochtem Fisch besteht, der oft mit Nori (gerösteter Seetang) umwickelt wird.", image: null, recipe: "https://www.reishunger.de/rezepte/rezept/1268/klassisches-maki-sushi-und-inside-out-rolls"},
@@ -108,13 +109,13 @@ fillMenuListButton.addEventListener("click", function (){
         {meal: "Currywurst", description: "Currywurst ist eine deutsche Imbiss-Spezialität, bestehend aus einer mit Currypulver gewürzten Bratwurst, serviert mit einer Sauce aus Ketchup und Currypulver.", image: null, recipe: "https://www.chefkoch.de/rezepte/304621110745012/Currysauce-fuer-Currywurst.html"},
         {meal: "Gyros mit Tzatziki", description: "Gyros ist griechisches mariniertes Fleisch, oft Schweinefleisch, serviert mit Tzatziki (Joghurtsauce mit Gurken und Knoblauch), dazu passt Fladenbrot und Salat.", image: null, recipe: "https://www.kochbar.de/rezept/447137/Gyros-mit-Tzatziki-Rosmarinkartoffeln-und-Krautsalat.html"},
         {meal: "Lachsfilet mit Ofengemüse", description: "Lachsfilet wird mit einer Kräuter-Zitronen-Marinade mariniert und zusammen mit verschiedenen Gemüsesorten wie Paprika, Zucchini und Kartoffeln im Ofen gegart.", image: null, recipe: "https://www.chefkoch.de/rezepte/2687151421399069/Low-Carb-Lachs-mit-Ofengemuese.html"},
-        {meal: "Moussaka", description: "Moussaka ist ein griechisches Auflaufgericht mit Schichten aus Auberginen, Hackfleisch, Kartoffeln und einer cremigen Bechamelsauce.", image: "https://www.einfachkochen.de/sites/einfachkochen.de/files/styles/full_width_tablet_4_3/public/2021-07/griechische_moussaka_1_0.jpg?h=a1e1a043&itok=4TYacUGz", recipe: "https://www.einfachkochen.de/rezepte/griechische-moussaka-das-original-rezept-mit-kartoffeln"},
+        {meal: "Moussaka", description: "Moussaka ist ein griechisches Auflaufgericht mit Schichten aus Auberginen, Hackfleisch, Kartoffeln und einer cremigen Bechamelsauce.", image: null, recipe: "https://www.einfachkochen.de/rezepte/griechische-moussaka-das-original-rezept-mit-kartoffeln"},
         {meal: "Bibimbap", description: "Bibimbap ist ein koreanisches Reisgericht, das mit verschiedenen Gemüsesorten, mariniertem Fleisch, einem Spiegelei und scharfer Gochujang-Soße serviert wird.", image: null, recipe: "https://www.eatbetter.de/rezepte/bibimbap-so-einfach-selbst-machen"},
         {meal: "Osso Buco", description: "Osso Buco ist ein italienisches Schmorgericht, das aus geschmorten Kalbshaxenscheiben mit Gemüse, Wein und Brühe zubereitet wird.", image: null, recipe: "https://www.essen-und-trinken.de/rezepte/56560-rzpt-ossobuco"},
         {meal: "Pho", description: "Pho ist eine vietnamesische Nudelsuppe, die aus einer würzigen Brühe, Reisnudeln, dünn geschnittenem Rindfleisch oder Hühnchen, Kräutern und verschiedenen Gewürzen besteht.", image: null, recipe: "https://www.eatbetter.de/rezepte/pho-bo-die-schnelle-einfache-nudelsuppe"},
         {meal: "Paella", description: "Paella ist ein spanisches Reisgericht, das mit Safran gewürzt und mit Meeresfrüchten, Hühnchen, Gemüse und Bohnen zubereitet wird.", image: null, recipe: "https://www.livingathome.de/kochen-feiern/rezepte/10567-rzpt-rezept-paella"}
     ]))
-})
+});
 
 
 

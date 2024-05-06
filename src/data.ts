@@ -1,5 +1,5 @@
 import { IsMenu } from './interface.ts';
-import {menuTable} from "./dom-utils.ts";
+import {menuTable, clearList} from "./dom-utils.ts";
 
 export function save(newMenu: IsMenu){
 
@@ -50,5 +50,10 @@ export function deleteMenu (index: number) {
     localStorage.setItem('form', JSON.stringify(data));
 }
 
-
+document.addEventListener("DOMContentLoaded", function() {
+    clearList.addEventListener("click", function() {
+        localStorage.clear();
+        location.reload();
+    });
+});
 
