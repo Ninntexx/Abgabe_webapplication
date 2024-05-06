@@ -173,3 +173,8 @@ td a:hover{
     border-radius: 13px;
     padding: 10px;
 }
+
+#menuTable img{
+    max-width: 100px;
+
+}
