@@ -50,7 +50,13 @@ export function deleteMenu (index: number) {
     localStorage.setItem('form', JSON.stringify(data));
 }
 
+// clearList clears the whole table and hides when table is empty
 document.addEventListener("DOMContentLoaded", function() {
+
+    if (!localStorage.getItem("form")) {
+        clearList.style.display = "none";
+    }
+
     clearList.addEventListener("click", function() {
         localStorage.clear();
         location.reload();
