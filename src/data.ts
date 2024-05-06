@@ -54,12 +54,16 @@ export function deleteMenu (index: number) {
 document.addEventListener("DOMContentLoaded", function() {
 
     if (!localStorage.getItem("form")) {
-        clearList.style.display = "none";
+        if (clearList) {
+            clearList.style.display = "none";
+        }
     }
 
-    clearList.addEventListener("click", function() {
-        localStorage.clear();
-        location.reload();
-    });
+    if (clearList) {
+        clearList.addEventListener("click", function() {
+            localStorage.clear();
+            location.reload();
+        });
+    }
 });
 
