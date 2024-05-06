@@ -86,7 +86,7 @@ find.addEventListener('click', function ()  {
         const menuOutput = document.createElement('div');
         menuOutput.id = 'menuOutput';
         menuOutput.innerHTML = `
-    <img id="imageOutput" src="${menuShow.image || 'public/chef.png'}" alt="${menuShow.image ? 'Menu Image' : 'Chef Image'}">
+    <img id="imageOutput" src="${menuShow.image || '/chef.png'}" alt="${menuShow.image ? 'Menu Image' : 'Chef Image'}">
     <h2 id="menuText">${menuShow.meal}</h2>
     <a href="${menuShow.recipe}">${menuShow.recipe}</a>
     <p id="descriptionOutput">${menuShow.description}</p>`;

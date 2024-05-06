@@ -134,6 +134,7 @@ nav input,nav button, nav a{
     margin: 0 auto;
     max-width: 300px;
     max-height: 300px;
+
 }
 
 #menuOutput {
@@ -176,5 +177,27 @@ td a:hover{
 
 #menuTable img{
     max-width: 100px;
+}
 
+#menuTable .emptyMenuList{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: #24305E;
+    background-color: #A8D0E6;
+    border: 0;
+    font-size: xxx-large;
+    padding: 10px;
+    font-family: "High Tower Text", "sans-serif";
+}
+
+#menuTable .emptyMenuList img{
+    max-width: 40%;
+    width: 500px;
+    height: 500px;
+}
+
+#menuOutput h2{
+    margin: 10px;
 }

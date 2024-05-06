@@ -1,6 +1,7 @@
 import { IsMenu } from './interface.ts';
 import {menuTable, clearList, fillMenuListButton} from "./dom-utils.ts";
 
+clearListButton();
 export function save(newMenu: IsMenu){
 
     // if there is nothing saved at the start then save an empty array
@@ -18,6 +19,8 @@ export function save(newMenu: IsMenu){
 }
 
 export function view(){
+    if(!menuTable) return
+    menuTable.innerHTML = "";
     // if there is indeed data then continue
     if(localStorage.getItem('form') != null){
         const menu: IsMenu[] = JSON.parse(localStorage.getItem('form')as string);
@@ -29,19 +32,34 @@ export function view(){
             <td>${menu.description}</td>
             <td><img src="${menu.image}" alt=""></td>
             <td><a href="${menu.recipe}">Link</a></td>
-            <td id="deleteButton"><button id="${index}"><img src="public/trash.svg" alt="löschen"></button></td>
+            <td id="deleteButton"><button id="${index}"><img src="/trash.svg" alt="löschen"></button></td>
         `;
             tbody.appendChild(newRow);
         })
+        clearList.style.display = "";
         menuTable.appendChild(tbody);
         menu.forEach((_menu: IsMenu, index: number)=>{
             const button = document.getElementById(`${index}`) as HTMLButtonElement;
             button.addEventListener('click', function(){
                 deleteMenu(index);
-                location.reload();
+                view();
             });
         })
+        if(menu.length === 0) listEmpty();
+
+    } else {
+        listEmpty();
     }
+}
+
+function listEmpty(){
+    clearList.style.display = "none";
+    const newRow = document.createElement('tr');
+    newRow.innerHTML = `
+            <td class="emptyMenuList">Eine gähnende Leere, füge zuerst Gerichte hinzu!</td>
+            <td class="emptyMenuList"><img src="/giphy.gif" alt=""></td>
+        `;
+    menuTable.appendChild(newRow);
 }
 
 export function deleteMenu (index: number) {
@@ -51,21 +69,14 @@ export function deleteMenu (index: number) {
 }
 
 // clearList clears the whole table and hides when table is empty
-document.addEventListener("DOMContentLoaded", function() {
-
-    if (!localStorage.getItem("form")) {
-        if (clearList) {
-            clearList.style.display = "none";
-        }
-    }
-
+function clearListButton() {
     if (clearList) {
         clearList.addEventListener("click", function() {
             localStorage.clear();
-            location.reload();
+            view();
         });
     }
-});
+}
 
 // Adds A list of example menus to the menuList Table
 fillMenuListButton.addEventListener("click", function (){
@@ -87,5 +98,5 @@ fillMenuListButton.addEventListener("click", function (){
         {meal: "Pho", description: "Pho ist eine vietnamesische Nudelsuppe, die aus einer würzigen Brühe, Reisnudeln, dünn geschnittenem Rindfleisch oder Hühnchen, Kräutern und verschiedenen Gewürzen besteht.", image: "https://www.eatbetter.de/sites/eatbetter.de/files/styles/full_width_tablet_4_3/public/2021-12/11-pho-bo-5688-quer.jpg?h=935f78ac&itok=yhdVi_wc", recipe: "https://www.eatbetter.de/rezepte/pho-bo-die-schnelle-einfache-nudelsuppe"},
         {meal: "Paella", description: "Paella ist ein spanisches Reisgericht, das mit Safran gewürzt und mit Meeresfrüchten, Hühnchen, Gemüse und Bohnen zubereitet wird.", image: "https://image.livingathome.de/12858546/t/w4/v2/w960/r1/-/lah201306080-paella-jpg--41174-.jpg", recipe: "https://www.livingathome.de/kochen-feiern/rezepte/10567-rzpt-rezept-paella"}
     ]))
-    location.reload();
+    view();
 });
