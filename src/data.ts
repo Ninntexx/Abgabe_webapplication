@@ -23,7 +23,7 @@ export function view(){
     menuTable.innerHTML = "";
     // if there is indeed data then continue
     if(localStorage.getItem('form') != null){
-        const menu: IsMenu[] = JSON.parse(localStorage.getItem('form')as string);
+        const menu: IsMenu[] = JSON.parse(localStorage.getItem('form') as string);
         const tbody = document.querySelector('tbody') || document.createElement('tbody');
         menu.forEach((menu: IsMenu, index: number) =>{
             const newRow = document.createElement('tr');
