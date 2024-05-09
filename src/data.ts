@@ -18,6 +18,7 @@ export function save(newMenu: IsMenu){
 
 }
 
+// adds data to the menuTable
 export function view(){
     menuTable.innerHTML = "";
     // if there is indeed data then continue
@@ -50,6 +51,7 @@ export function view(){
     }
 }
 
+// shown when table on menuList is empty
 function listEmpty(){
     clearList.style.display = "none";
     const newRow = document.createElement('tr');
@@ -60,6 +62,7 @@ function listEmpty(){
     menuTable.appendChild(newRow);
 }
 
+// deletes a menu
 export function deleteMenu (index: number) {
     let data: Array<IsMenu> = JSON.parse(localStorage.getItem('form')as string);
     data.splice(index,1);
@@ -76,7 +79,7 @@ function clearListButton() {
     }
 }
 
-// Adds A list of example menus to the menuList Table
+// Adds a list of example menus to the local storage
 export function exampleMenus (){
     localStorage.setItem('form', JSON.stringify([
         {meal: "Sushi", description: "Sushi ist eine japanische Spezialität, die aus gekochtem Reis und rohem oder gekochtem Fisch besteht, der oft mit Nori (gerösteter Seetang) umwickelt wird.", image: "https://assets.zuckerjagdwurst.com/62utca52nr9qv140h85vb7cihmud/1110/701/55/true/center/R849-Horl-Sushiplatte-113.jpg?animated=false", recipe: "https://www.reishunger.de/rezepte/rezept/1268/klassisches-maki-sushi-und-inside-out-rolls"},

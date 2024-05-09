@@ -3,11 +3,13 @@ import { IsMenu } from './interface';
 import './styles/styles.css';
 import {exampleMenus, save} from "./data.ts";
 
+// Closes the menu form modal
 function closeModal() {
     const modal = document.querySelector('#modal') as HTMLDivElement;
     modal.remove();
 }
 
+// when clicked adds a modal with a form and saves the input in local storage
 addMenu.addEventListener("click", function() {
         // create a modal
         const modal = document.createElement('div');
@@ -38,7 +40,6 @@ addMenu.addEventListener("click", function() {
         cancelButton.addEventListener('click', closeModal);
 
         // event listener to submit button
-        const nextButton= document.querySelector('#next') as HTMLInputElement;
         form.addEventListener('submit', function (event: Event) {
             event.preventDefault();
             const form = document.querySelector('#page1') as HTMLFormElement;
@@ -95,6 +96,7 @@ find.addEventListener('click', function ()  {
     }
 })
 
+// Calls on exampleMenus(); function to save example menus in local storage
 fillMenuListButton.addEventListener("click", function () {
     exampleMenus();
 });
