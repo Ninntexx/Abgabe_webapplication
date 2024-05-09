@@ -1,4 +1,4 @@
-import {addMenu, result, find, fillMenuListButton} from './dom-utils';
+import {addMenu, result, findButton, fillMenuListButton} from './dom-utils';
 import { IsMenu } from './interface';
 import './styles/styles.css';
 import {exampleMenus, save} from "./data.ts";
@@ -70,7 +70,7 @@ function getRandom(min: number, max: number) {
 
 
 // displays a random meal from menuList
-find.addEventListener('click', function ()  {
+findButton.addEventListener('click', function ()  {
     result.innerHTML="";
     let data: Array<IsMenu> = JSON.parse(localStorage.getItem('form')as string);
     if(!data || data.length === 0){
