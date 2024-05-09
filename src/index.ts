@@ -7,6 +7,7 @@ function closeModal() {
     const modal = document.querySelector('#modal') as HTMLDivElement;
     modal.remove();
 }
+
 addMenu.addEventListener("click", function() {
         // create a modal
         const modal = document.createElement('div');
@@ -66,6 +67,7 @@ function getRandom(min: number, max: number) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
+
 // displays a random meal from menuList
 find.addEventListener('click', function ()  {
     result.innerHTML="";
@@ -91,7 +93,6 @@ find.addEventListener('click', function ()  {
     <p id="descriptionOutput">${menuShow.description}</p>`;
         result.appendChild(menuOutput);
     }
-
 })
 
 fillMenuListButton.addEventListener("click", function () {
