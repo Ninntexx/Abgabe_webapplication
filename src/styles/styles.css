@@ -3,31 +3,32 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
-    color: inherit;
     font-family: "Ebrima",sans-serif;
     /*outline:1px blue solid;*/
 }
 
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    background-color: #24305E;
+    justify-content: space-between;
 }
 
 nav ul {
     display: flex;
 }
 
-
 nav li{
     margin: 10px;
 }
 
 body {
-    background-color: teal;
+    background-color: #A8D0E6;
+    width: 100%;
+    color: #A8D0E6;
 }
 
-.modal {
+#modal {
     position: fixed;
     top: 0;
     right: 0;
@@ -40,50 +41,40 @@ body {
     overflow: auto;
 
     z-index: 2;
-    background-color: rgba(128,128,128,0.70);
+    background-color: rgba(1,1,1,0.70);
 }
 
-.modalContent{
-    background-color: #fff;
-    padding: 20px;
-
-}
-
-.modalContent form{
+#modal form{
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
+    background-color: #A8D0E6;
+    padding: 20px;
+    color: #303C6C;
+    border: 1px solid #A8D0E6;
+    border-radius: 20px;
 }
 
-.modalContent input[type="submit"]{
+.menuAddButtons{
+    display: flex;
     margin-top: 20px;
-    width: 25%;
+    justify-content: space-between;
 }
 
-select {
-    width: 50%;
-}
-
-.modalContent input, select {
+#modal input[type="submit"], #modal button {
     margin-bottom: 20px;
+    color: #A8D0E6;
+    background-color: #303C6C;
 }
 
-div label, fieldset {
+#modal input, #modal button, textarea{
+    padding: 7px;
+    border-radius: 10px;
+    border: 1px solid #A8D0E6;
+}
+
+label{
     margin-top: 20px;
     margin-bottom: 5px;
-}
-
-fieldset {
-    display: flex;
-}
-
-input[type="radio"], fieldset label {
-    margin: 0;
-    padding: 10px;
-}
-
-input[type="radio"]{
-    margin-left: 10px;
 }
 
 #mealForm{
@@ -91,15 +82,133 @@ input[type="radio"]{
     text-align: center;
 }
 
-#mealForm input {
+#findButton {
     border-radius: 25px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 25px 100px 25px 100px;
     font-size: 30px;
     font-weight: bold;
+    border: none;
+    background-color: #24305E;
+    color: #A8D0E6;
 }
 
 #mealForm h2{
     padding-bottom: 20px;
+    color: #24305E;
 }
 
+#logo {
+    border-radius: 100px;
+    height: 30px;
+    width: 30px;
+    background-color: #F76C6C;
+    padding: 5px;
+    margin: 15px;
+}
+
+h1 {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 15px;
+}
+
+#title { display: flex }
+
+#menuTable {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: large;
+}
+#menuTableModal { margin: 70px }
+
+#menuTable td {
+    border: 2px solid #A8D0E6 ;
+    padding: 8px;
+    text-align: left;
+    background-color: #f2f2f2;
+    color: #24305E;
+    height: 90px;
+}
+
+nav input,nav button, nav a{
+    color: #A8D0E6;
+    border: none;
+    background: none;
+    font-size: medium;
+}
+
+#noMenu{
+    color: #F76C6C;
+}
+
+#imageOutput{
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#menuOutput {
+    display: flex;
+    flex-direction: column;
+    color: #24305E;
+    margin-bottom: 20px;
+}
+
+#descriptionOutput{
+    max-width: 600px;
+    align-self: center;
+}
+
+#result{
+    margin-top: 30px;
+    text-align: center;
+}
+
+#deleteButton {
+    width: 5px;
+}
+
+td a:hover{
+    color: #24305E;
+}
+
+#result a{
+    color: #303C6C;
+    font-size: small;
+}
+
+#clearList {
+    margin-top: 10px;
+    color: #A8D0E6;
+    background-color: #303C6C;
+    border-radius: 13px;
+    padding: 10px;
+}
+
+#menuTable img{
+    max-width: 100px;
+}
+
+#menuTable .emptyMenuList{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: #24305E;
+    background-color: #A8D0E6;
+    border: 0;
+    font-size: xxx-large;
+    padding: 10px;
+    font-family: "High Tower Text", "sans-serif";
+}
+
+#menuTable .emptyMenuList img{
+    max-width: 40%;
+    width: 500px;
+    height: 500px;
+}
+
+#menuOutput h2{
+    margin: 10px;
+}
